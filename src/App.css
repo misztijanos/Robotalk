@@ -1,17 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 :root {
   --dark-yellow: #f6be00;
+  --dark-green: #2f855a;
+  --light-green: #aedac4;
+  --dark-red: #cf142b;
+  --light-red: #ffcccb;
 }
 body {
   background: #222;
+  font-family: Arial, sans-serif;
 }
+
+button {
+  line-height: 1em;
+  padding: 0.5em 1em;
+  border-radius: 0.4em;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 1.3em;
+  font-style: bold;
+  background: white;
+  margin-top: 2vh;
+}
+
 .container {
   margin: auto;
-  max-width: 1500px;
+  max-width: 1200px;
   padding: 2%;
 }
-.headline {
+.headline,
+.timer {
   font-family: "Permanent Marker", cursive;
-  font-size: 3em;
+  font-size: 4em;
   color: var(--dark-yellow);
+  margin-bottom: 0.3em;
+}
+
+.phrase {
+  margin-bottom: 0.2em;
+  display: flex;
+}
+.num-input,
+.text-input {
+  height: 2em;
+  padding: 0.5em;
+  border: 1px solid black;
+  border-radius: 0.4em;
+  color: #333;
+  font-size: 1.3em;
+  font-style: bold;
+  background: white;
+}
+
+.num-input {
+  margin-right: 0.4vw;
+  min-width: 3em;
+  flex-basis: 15%;
+}
+
+.text-input {
+  flex-basis: 85%;
+}
+
+.timer {
+  margin-top: 6vh;
+}
+
+button.start,
+button.stop {
+  line-height: 2.5em;
+  width: 8em;
+}
+button.start {
+  color: var(--light-green);
+  background: var(--dark-green);
+}
+
+button.stop {
+  color: var(--light-red);
+  background: var(--dark-red);
 }
