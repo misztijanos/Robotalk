@@ -1,12 +1,16 @@
 import { useState } from "react";
 import "./App.css";
 import Phrase from "./Phrase";
+import { useStopwatch } from "react-timer-hook";
 
 function App() {
   const [phrases, setPhrases] = useState([
     { time: 1, text: "Hi!" },
     { time: 2, text: "Type your text here." },
   ]);
+  const { seconds, isRunning, start, reset } = useStopwatch({
+    autoStart: false,
+  });
 
   function handleChange(index, e) {
     const newPhrases = [...phrases];
@@ -52,9 +56,16 @@ function App() {
         ))}
       </div>
       <button onClick={handleAdd}>Add</button>
-      <h1 className="timer">0</h1>
-      <button className="start">Start</button>
-      <button className="stop">Stop</button>
+      <h1 className="timer">{seconds}</h1>
+      {!isRunning ? (
+        <button className="start" onClick={start}>
+          Start
+        </button>
+      ) : (
+        <button className="stop" onClick={reset}>
+          Stop
+        </button>
+      )}
     </div>
   );
 }
