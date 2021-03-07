@@ -19,6 +19,24 @@ function App() {
 
     setPhrases(newPhrases);
   }
+
+  function handleAdd() {
+    const newPhrases =
+      phrases.length === 0
+        ? [{ time: 1, text: "Hi!" }]
+        : [
+            ...phrases,
+            { time: phrases[phrases.length - 1].time + 1, text: "" },
+          ];
+    setPhrases(newPhrases);
+  }
+
+  function handleDelete(index) {
+    const newPhrases = [...phrases];
+    newPhrases.splice(index, 1);
+    setPhrases(newPhrases);
+  }
+
   return (
     <div className="container">
       <h1 className="headline">Time the Robotalk</h1>
@@ -29,10 +47,11 @@ function App() {
             index={index}
             key={index}
             handleChange={handleChange}
+            handleDelete={handleDelete}
           />
         ))}
       </div>
-      <button>Add</button>
+      <button onClick={handleAdd}>Add</button>
       <h1 className="timer">0</h1>
       <button className="start">Start</button>
       <button className="stop">Stop</button>

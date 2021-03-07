@@ -84,3 +84,25 @@ button.stop {
   color: var(--light-red);
   background: var(--dark-red);
 }
+
+.phrase {
+  position: relative;
+}
+
+button.delete {
+  position: absolute;
+  right: 1em;
+  top: calc(50% - 0.5em);
+  height: 1em;
+  width: 1em;
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+}
+
+button.delete img {
+  height: 1em;
+  width: 1em;
+  top: 0;
+  left: 0;
+}
