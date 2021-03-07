@@ -12,9 +12,10 @@ body {
 }
 
 button {
+  font-size: 1.3em;
   line-height: 1em;
   padding: 0.5em 1em;
-  border-radius: 0.4em;
+  border-radius: 0.5rem;
   border: none;
   cursor: pointer;
   color: #333;
@@ -32,23 +33,24 @@ button {
 .headline,
 .timer {
   font-family: "Permanent Marker", cursive;
-  font-size: 4em;
+  font-size: 4rem;
   color: var(--dark-yellow);
-  margin-bottom: 0.3em;
+  margin-bottom: 1rem;
 }
 
 .phrase {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.2rem;
   display: flex;
 }
 .num-input,
 .text-input {
+  font-size: 1.3em;
   height: 2em;
   padding: 0.5em;
   border: 1px solid black;
   border-radius: 0.4em;
   color: #333;
-  font-size: 1.3em;
+
   font-style: bold;
   background: white;
 }
@@ -69,8 +71,9 @@ button {
 
 button.start,
 button.stop {
-  line-height: 2.5em;
-  width: 8em;
+  font-size: 1.5rem;
+  line-height: 2em;
+  width: 6em;
 }
 button.start {
   color: var(--light-green);
