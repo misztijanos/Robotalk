@@ -1,1 +1,1 @@
-﻿See the app live: robotalk.22web.org 
+﻿See the app live: www.misztijanos.com/robotalk/
